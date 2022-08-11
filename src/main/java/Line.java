@@ -11,8 +11,10 @@ public class Line {
     }
 
 
-    public static String getX(String input) {
+    public static String getX(String input) throws IllegalArgumentException {
         String x = input.split(",")[0].substring(1);
+        int intX = Integer.parseInt(x);
+        Validator.validatePointLength(intX);
         return x;
     }
 
