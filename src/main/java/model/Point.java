@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Objects;
-import java.util.Comparator;
 
 public class Point implements Comparable<Point> {
     int positionX;
@@ -35,6 +34,9 @@ public class Point implements Comparable<Point> {
 
     @Override
     public int compareTo(Point o) {
-        if (positionX)
+        if (positionX == o.positionX) {
+            return positionY - o.positionY;
+        }
+        return positionX - o.positionX;
     }
 }

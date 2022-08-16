@@ -4,18 +4,24 @@ import java.util.ArrayList;
 
 public class Square {
     private static final String ONLY_RECTANGLE_MASSAGE = "직사각형만 연산이 가능합니다.";
+    Points points;
+    public Square(Points points) throws IllegalArgumentException{
+        this.points = points;
+    }
 
-    ArrayList<Point> squareList;
-    Point pointA;
-    Point pointB;
-    Point pointC;
-    Point pointD;
+    private double getAB() {
+        Line lineAB = new Line(this.points.getA(), this.points.getB());
+        double width = lineAB.getLineWidth();
+        return width;
+    }
+    private double getAC() {
+        Line lineAD = new Line(this.points.getA(), this.points.getC());
+        double width = lineAD.getLineWidth();
+        return width;
+    }
 
-    public Square(String input) throws IllegalArgumentException{
-        squareList.add(new Point(input.split("-")[0]));
-        squareList.add(new Point(input.split("-")[1]));
-        squareList.add(new Point(input.split("-")[2]));
-        squareList.add(new Point(input.split("-")[3]));
-        }
+    public double getWidth() {
+        double width = getAB() * getAC();
+        return width;
     }
 }

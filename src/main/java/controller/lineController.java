@@ -1,6 +1,7 @@
 package controller;
 
 import model.Line;
+import model.Point;
 import view.inputView;
 
 import java.util.Scanner;
@@ -15,9 +16,11 @@ public class lineController {
     }
 
     public Line generateLine() {
+        String input = getInput();
         try {
-            String input = getInput();
-            Line line = new Line(input);
+            Point pointA = new Point(getInput().split("-")[0]);
+            Point pointB = new Point(getInput().split("-")[2]);
+            Line line = new Line(pointA, pointB);
             return line;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
