@@ -1,21 +1,25 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Square {
-    private static final String ONLY_RECTANGLE_MASSAGE = "직사각형만 연산이 가능합니다.";
+    private static final String SQUARE_SHAPE_ERROR_MASSAGE = "직사각형의 네 각은 직각이어야 합니다.";
     Points points;
     public Square(Points points) throws IllegalArgumentException{
         this.points = points;
+        if (points.getA().getX() != points.getB().getX() ||
+            points.getA().getY() != points.getC().getY() ||
+            points.getD().getX() != points.getC().getX() ||
+            points.getD().getY() != points.getB().getY()) {
+            throw new IllegalArgumentException(SQUARE_SHAPE_ERROR_MASSAGE);
+        }
     }
 
     private double getAB() {
-        Line lineAB = new Line(this.points.getA(), this.points.getB());
+        Line lineAB = new Line(points.getA(), points.getB());
         double width = lineAB.getLineWidth();
         return width;
     }
     private double getAC() {
-        Line lineAD = new Line(this.points.getA(), this.points.getC());
+        Line lineAD = new Line(points.getA(), points.getC());
         double width = lineAD.getLineWidth();
         return width;
     }

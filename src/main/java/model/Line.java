@@ -1,9 +1,5 @@
 package model;
 
-import validator.Validator;
-
-import java.util.Scanner;
-
 public class Line {
     Point pointA;
     Point pointB;

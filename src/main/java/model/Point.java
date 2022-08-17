@@ -11,7 +11,7 @@ public class Point implements Comparable<Point> {
         String tempY = input.split(",")[1];
         this.positionY = Integer.parseInt(input.split(",")[1].substring(0, tempY.length()-1));
 
-        if ((positionX < 0 &&positionX > 24) | (positionY < 0 && positionY > 24)) {
+        if ((positionX < 0 | positionX > 24) | (positionY < 0 | positionY > 24)) {
             throw new IllegalArgumentException("최대 좌표는 24를 초과할 수 없습니다.");
         }
     }
