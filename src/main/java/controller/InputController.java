@@ -1,17 +1,16 @@
 package controller;
 
 import model.*;
-import view.inputView;
 import view.ResultView;
+import view.InputView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InputController {
-    ResultView resultView = new ResultView();
 
     public String getInput() {
-        inputView.firstInputView();
+        InputView.firstInputView();
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         return input;
@@ -32,14 +31,14 @@ public class InputController {
             Points points = generatePoints();
             if (points.size() == 2) {
                 Line line = new Line(points.getA(), points.getB());
-                return resultView.lineResultView() + line.getLineWidth();
+                return ResultView.lineResultView() + line.getWidth();
             }
             if (points.size() == 3) {
                 Triangle triangle = new Triangle(points);
-                return resultView.triangleResultView() + triangle.getWidth();
+                return ResultView.triangleResultView() + triangle.getWidth();
             }
             Square square = new Square(points);
-            return resultView.squareResultView() + square.getWidth();
+            return ResultView.squareResultView() + square.getWidth();
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return getWidth();

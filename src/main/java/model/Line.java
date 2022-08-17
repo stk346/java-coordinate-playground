@@ -1,6 +1,6 @@
 package model;
 
-public class Line {
+public class Line implements Figure {
     Point pointA;
     Point pointB;
     public Line(Point pointA, Point pointB) {
@@ -8,7 +8,7 @@ public class Line {
         this.pointB = pointB;
     }
 
-    public double getLineWidth() {
+    public double getWidth() {
         int Ax = pointA.getX();
         int Ay = pointA.getY();
         int Bx = pointB.getX();

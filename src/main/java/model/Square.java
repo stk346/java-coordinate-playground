@@ -1,6 +1,6 @@
 package model;
 
-public class Square {
+public class Square implements Figure {
     private static final String SQUARE_SHAPE_ERROR_MASSAGE = "직사각형의 네 각은 직각이어야 합니다.";
     Points points;
     public Square(Points points) throws IllegalArgumentException{
@@ -15,12 +15,12 @@ public class Square {
 
     private double getAB() {
         Line lineAB = new Line(points.getA(), points.getB());
-        double width = lineAB.getLineWidth();
+        double width = lineAB.getWidth();
         return width;
     }
     private double getAC() {
         Line lineAD = new Line(points.getA(), points.getC());
-        double width = lineAD.getLineWidth();
+        double width = lineAD.getWidth();
         return width;
     }
 

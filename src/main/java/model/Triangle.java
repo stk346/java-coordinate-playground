@@ -1,6 +1,6 @@
 package model;
 
-public class Triangle {
+public class Triangle implements Figure {
     Points points;
     public Triangle(Points points) {
         this.points = points;
@@ -8,17 +8,17 @@ public class Triangle {
 
     public double getAB() {
         Line line = new Line(points.getA(), points.getB());
-        double width = line.getLineWidth();
+        double width = line.getWidth();
         return width;
     }
     public double getBC() {
         Line line = new Line(points.getB(), points.getC());
-        double width = line.getLineWidth();
+        double width = line.getWidth();
         return width;
     }
     public double getCA() {
         Line line = new Line(points.getC(), points.getA());
-        double width = line.getLineWidth();
+        double width = line.getWidth();
         return width;
     }
 
