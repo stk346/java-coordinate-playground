@@ -7,17 +7,17 @@ public class Triangle implements Figure {
     }
 
     public double getAB() {
-        Line line = new Line(points.getA(), points.getB());
+        Line line = Line.of(points.get(0), points.get(1));
         double width = line.getWidth();
         return width;
     }
     public double getBC() {
-        Line line = new Line(points.getB(), points.getC());
+        Line line = Line.of(points.get(1), points.get(2));
         double width = line.getWidth();
         return width;
     }
     public double getCA() {
-        Line line = new Line(points.getC(), points.getA());
+        Line line = Line.of(points.get(2), points.get(0));
         double width = line.getWidth();
         return width;
     }
@@ -28,5 +28,9 @@ public class Triangle implements Figure {
         double c = getCA();
         double triangleWidth = 0.25*Math.sqrt(4*Math.pow(a, 2)*Math.pow(b, 2) - Math.pow(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2), 2));
         return Math.round(triangleWidth*10)/10;
+    }
+
+    public String getResult() {
+        return "삼각형 넓이는 %.2f";
     }
 }

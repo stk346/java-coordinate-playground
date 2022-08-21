@@ -1,12 +1,13 @@
 package model;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 
 public class Points {
     private static final String SHAPE_ERROR_MASSAGE = "좌표의 개수는 2-4개 이어야 합니다.";
-    ArrayList<Point> points;
+    List<Point> points;
 
-    public Points(ArrayList<Point> points) throws IllegalArgumentException {
+    public Points(List<Point> points) throws IllegalArgumentException {
         Collections.sort(points);
         this.points = points;
         if (points.size() == 1 || points.size() > 4) {
@@ -17,7 +18,7 @@ public class Points {
     public String getPoints() {
         String tempString = "";
         for (Point point : points) {
-            tempString += "("+point.getX()+","+point.getY()+")"+"-";
+            tempString += "(" + point.getX() + "," + point.getY() + ")" + "-";
         }
         return tempString;
     }
@@ -25,16 +26,8 @@ public class Points {
     public int size() {
         return this.points.size();
     }
-    public Point getA() {
-        return this.points.get(0);
-    }
-    public Point getB() {
-        return this.points.get(1);
-    }
-    public Point getC() {
-        return this.points.get(2);
-    }
-    public Point getD() {
-        return this.points.get(3);
+
+    public Point get(final int index) {
+        return this.points.get(index);
     }
 }

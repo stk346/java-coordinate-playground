@@ -1,5 +1,6 @@
 package modelTest;
 
+import controller.InputController;
 import model.Point;
 import model.Points;
 import model.Triangle;
@@ -50,5 +51,21 @@ public class TriangleTest {
         Points points = new Points(pointArray);
         Triangle triangle = new Triangle(points);
         System.out.println(triangle.getWidth());
+    }
+    @Test
+    public void 실패케이스() {
+        try{
+            String input = "(10,10-(24,24)-(25,25)";
+            String[] stringArray = input.split("-");
+            ArrayList<Point> pointArray = new ArrayList<>();
+            for (String s : stringArray) {
+                Point point = new Point(s);
+                pointArray.add(point);
+            }
+            Points points = new Points(pointArray);
+            Triangle triangle = new Triangle(points);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
