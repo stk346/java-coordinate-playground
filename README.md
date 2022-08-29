@@ -25,7 +25,7 @@ git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
 ----
-- [ ] 선 길이 구하는 기능 구현  
+- [x] 선 길이 구하는 기능 구현  
   - Point 만들기 (좌표 24이하 밸리대이션)
   - Points 일급 컬렉션 만들기 (List\<Points>\, x, y 순으로 정렬하는 생성자 구현해야함)
   - Points를 생성자로 갖는 Line 만들기
