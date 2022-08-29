@@ -16,6 +16,7 @@ public class Points {
         for (String s : inputArray) {
             pointArray.add(new Point(s));
         }
+        Collections.sort(pointArray);
         this.points = pointArray;
     }
 

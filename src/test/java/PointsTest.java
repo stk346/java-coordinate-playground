@@ -28,4 +28,20 @@ public class PointsTest {
 //        assertThat(points.get()).isEqualTo("(10,10)-(10,18)-(22,10)-(22,18)");
         System.out.println(points.get());
     }
+
+    @Test
+    public void  좌표비교테스트() {
+        String input = "(10,10)-(22,10)-(22,18)-(10,18)";
+        Points points = new Points(input);
+        assertThat(points.getA().x == points.getB().x);
+    }
+    @Test
+    public void  ABCD제대로맞는지확인() {
+        String input = "(10,10)-(22,10)-(22,18)-(10,18)";
+        Points points = new Points(input);
+        System.out.println(points.getA().get());
+        System.out.println(points.getB().get());
+        System.out.println(points.getC().get());
+        System.out.println(points.getD().get());
+    }
 }
