@@ -28,7 +28,7 @@ ex) git checkout -b apply-feedback
 - [ ] 선 길이 구하는 기능 구현  
   - Point 만들기 (좌표 24이하 밸리대이션)
   - Points 일급 컬렉션 만들기 (List\<Points>\, x, y 순으로 정렬하는 생성자 구현해야함)
-  - Points를 생성자로 갖는 LineTest 만들기
+  - Points를 생성자로 갖는 Line 만들기
 - [ ] 사각형 면적 구하는 기능 구현
   - 생성자에서 사다리꼴, 마름모 제외한 직사각형만 허용하는 기능 구현
   - AB, AC 라인 길이 구한 후 넓이 구하는 기능 구현

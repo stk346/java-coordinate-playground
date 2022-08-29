@@ -15,4 +15,17 @@ public class PointsTest {
         Points points = new Points(tempArray);
         assertThat(points.get()).isEqualTo("(10,10)-(14,15)");
     }
+
+    @Test
+    public void 정렬테스트() {
+        String input = "(10,10)-(22,10)-(22,18)-(10,18)";
+        String[] inputArray = input.split("-");
+        ArrayList<Point> pointList = new ArrayList<>();
+        for (String s : inputArray) {
+            pointList.add(new Point(s));
+        }
+        Points points = new Points(pointList);
+//        assertThat(points.get()).isEqualTo("(10,10)-(10,18)-(22,10)-(22,18)");
+        System.out.println(points.get());
+    }
 }

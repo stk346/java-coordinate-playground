@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Points {
     ArrayList<Point> points;
 
     Points(ArrayList<Point> pointArray) {
+        Collections.sort(pointArray);
         this.points = pointArray;
     }
 
