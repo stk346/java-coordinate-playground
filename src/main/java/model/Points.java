@@ -12,7 +12,7 @@ public class Points {
     }
 
     // 테스트용 생성자
-    Points(String input) throws IllegalArgumentException {
+    public Points(String input) throws IllegalArgumentException {
         String[] inputArray = getStrings(input);
         ArrayList<Point> pointArray = getPoints(inputArray);
         if (pointArray.size() < 2 || pointArray.size() > 4) {

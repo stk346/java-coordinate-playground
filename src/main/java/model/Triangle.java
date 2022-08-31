@@ -16,6 +16,10 @@ public class Triangle implements Figure{
         double rounded = Math.round(width)*10/10;
         return rounded;
     }
+
+    public void widthView() {
+        System.out.println("삼걱형 넓이는 " + getWidth());
+    }
     private Line getLineA() {
         ArrayList<Point> LineCBList = new ArrayList<Point>();
         LineCBList.add(points.getC());

@@ -39,7 +39,7 @@ ex) git checkout -b apply-feedback
 - [x] 각 도형을 묶는 상위 인터페이스(Figure) 만들기
   - Figure를 활용해 FigureFactory 기능 구현 (if문 사용x)
   - Figure를 생성해주는 FigureCreator 기능 구현
-- [ ] 컨트롤러 구현
+- [x] 컨트롤러 구현
   - 컨트롤러 테스트
 - [ ] main함수 구현
 
