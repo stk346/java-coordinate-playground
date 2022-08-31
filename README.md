@@ -20,7 +20,6 @@
 git branch -a // 모든 로컬 브랜치 확인
 git checkout master // 기본 브랜치가 master인 경우
 git checkout main // 기본 브랜치가 main인 경우
-
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
@@ -32,7 +31,7 @@ ex) git checkout -b apply-feedback
 - [x] 사각형 면적 구하는 기능 구현
   - 생성자에서 사다리꼴, 마름모 제외한 직사각형만 허용하는 기능 구현
   - AB, AC 라인 길이 구한 후 넓이 구하는 기능 구현
-- [ ] 삼각형 면적 구하는 기능 구현
+- [x] 삼각형 면적 구하는 기능 구현
   - AB AC CA 라인 길이 구해서 면적 구하는 기능 구현
 - [ ] 밸리데이션
   - 좌표는 두개 이상, 4개 이하이어야 함
@@ -40,6 +39,9 @@ ex) git checkout -b apply-feedback
 - [ ] 각 도형을 묶는 상위 인터페이스(Figure) 만들기
   - Figure를 활용해 FigureFactory 기능 구현 (if문 사용x)
   - Figure를 생성해주는 FigureCreator 기능 구현
+- [ ] 컨트롤러 구현
+  - 컨트롤러 테스트
+- [ ] main함수 구현
 
 ---
 feat (feature)  
