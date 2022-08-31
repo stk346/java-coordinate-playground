@@ -1,7 +1,8 @@
-import java.sql.Array;
+package model;
+
 import java.util.ArrayList;
 
-public class Square {
+public class Square implements Figure{
     Points points;
     Square(Points points) throws IllegalArgumentException {
         this.points = points;

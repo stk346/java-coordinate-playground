@@ -1,3 +1,7 @@
+package model;
+
+import model.Points;
+import model.Triangle;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

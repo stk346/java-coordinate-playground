@@ -1,3 +1,7 @@
+package model;
+
+import model.Point;
+import model.Points;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

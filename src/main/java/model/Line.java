@@ -1,4 +1,6 @@
-public class Line {
+package model;
+
+public class Line implements Figure{
     Points points;
     Line(Points points) {
         this.points = points;

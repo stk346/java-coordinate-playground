@@ -25,9 +25,9 @@ ex) git checkout -b apply-feedback
 ```
 ----
 - [x] 선 길이 구하는 기능 구현  
-  - Point 만들기 (좌표 24이하 밸리대이션)
-  - Points 일급 컬렉션 만들기 (List\<Points>\, x, y 순으로 정렬하는 생성자 구현해야함)
-  - Points를 생성자로 갖는 Line 만들기
+  - model.Point 만들기 (좌표 24이하 밸리대이션)
+  - model.Points 일급 컬렉션 만들기 (List\<model.Points>\, x, y 순으로 정렬하는 생성자 구현해야함)
+  - Points를 생성자로 갖는 model.Line 만들기
 - [x] 사각형 면적 구하는 기능 구현
   - 생성자에서 사다리꼴, 마름모 제외한 직사각형만 허용하는 기능 구현
   - AB, AC 라인 길이 구한 후 넓이 구하는 기능 구현
@@ -36,7 +36,7 @@ ex) git checkout -b apply-feedback
 - [x] 밸리데이션
   - 좌표는 두개 이상, 4개 이하이어야 함
   - 좌표는 숫자로 이루어져 있어야함
-- [ ] 각 도형을 묶는 상위 인터페이스(Figure) 만들기
+- [x] 각 도형을 묶는 상위 인터페이스(Figure) 만들기
   - Figure를 활용해 FigureFactory 기능 구현 (if문 사용x)
   - Figure를 생성해주는 FigureCreator 기능 구현
 - [ ] 컨트롤러 구현

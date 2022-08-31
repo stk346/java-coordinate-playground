@@ -1,6 +1,8 @@
+package model;
+
 import java.util.ArrayList;
 
-public class Triangle {
+public class Triangle implements Figure{
     Points points;
     Triangle(Points points) {
         this.points = points;

@@ -1,3 +1,7 @@
+package model;
+
+import model.Line;
+import model.Points;
 import org.junit.jupiter.api.Test;
 
 public class LineTest {
