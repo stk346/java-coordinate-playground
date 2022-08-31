@@ -5,8 +5,8 @@ public class Point implements Comparable<Point>{
     int y;
 
     Point(String input) throws IllegalArgumentException {
-        this.x = Integer.parseInt(input.substring(input.indexOf('(') + 1, input.indexOf(',')));
-        this.y = Integer.parseInt(input.substring(input.indexOf(',') + 1, input.indexOf(')')));
+        this.x = getX(input);
+        this.y = getY(input);
         if (x > 24 || y > 24) {
             throw new IllegalArgumentException("좌표는 24를 초과할 수 없습니다.");
         }
@@ -15,7 +15,21 @@ public class Point implements Comparable<Point>{
     public String get() {
         return "(" + x + "," + y + ")";
     }
+    private int getY(String input) throws IllegalArgumentException {
+        String extractedY = input.substring(input.indexOf(',') + 1, input.indexOf(')'));
+        if (!extractedY.matches("[+-]?\\d*(\\.\\d+)?")) { //  숫자인지 판별
+            throw new IllegalArgumentException("좌표는 오직 숫자이어야 합니다.");
+        }
+        return Integer.parseInt(extractedY);
+    }
 
+    private int getX(String input) throws IllegalArgumentException {
+        String extractedX = input.substring(input.indexOf('(') + 1, input.indexOf(','));
+        if (!extractedX.matches("[+-]?\\d*(\\.\\d+)?")) { //  숫자인지 판별
+            throw new IllegalArgumentException("좌표는 오직 숫자이어야 합니다.");
+        }
+        return Integer.parseInt(extractedX);
+    }
     @Override
     public int compareTo(Point o) {
         if (x == o.x) {

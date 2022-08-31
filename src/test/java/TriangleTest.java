@@ -10,5 +10,4 @@ public class TriangleTest {
         Triangle triangle = new Triangle(points);
         System.out.println(triangle.getWidth());
     }
-
 }

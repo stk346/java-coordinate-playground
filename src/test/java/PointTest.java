@@ -17,4 +17,12 @@ public class PointTest {
         String input = "(24, 25)";
         assertThatThrownBy(() -> new Point(input)).isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    public void 포인트출력테스트() {
+        String input = "(1,1)";
+        Point point = new Point(input);
+
+        System.out.println(point.get());
+    }
 }
