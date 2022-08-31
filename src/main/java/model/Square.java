@@ -18,8 +18,8 @@ public class Square implements Figure{
         return getAB() * getAC();
     }
 
-    public void widthView() {
-        System.out.println("사각형 넓이는 " + getWidth());
+    public String widthView() {
+        return "사각형 넓이는 " + getWidth();
     }
 
     private double getAB() {

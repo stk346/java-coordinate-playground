@@ -17,8 +17,8 @@ public class Triangle implements Figure{
         return rounded;
     }
 
-    public void widthView() {
-        System.out.println("삼걱형 넓이는 " + getWidth());
+    public String widthView() {
+        return "삼걱형 넓이는 " + getWidth();
     }
     private Line getLineA() {
         ArrayList<Point> LineCBList = new ArrayList<Point>();

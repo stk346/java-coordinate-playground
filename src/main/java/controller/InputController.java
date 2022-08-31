@@ -6,7 +6,7 @@ import model.Points;
 
 public class InputController {
     String input;
-    InputController(String input) {
+    public InputController(String input) {
         this.input = input;
     }
 
@@ -21,8 +21,8 @@ public class InputController {
         return figureFactory.createFigure(points);
     }
 
-    public void returnWidth() {
+    public String returnWidth() {
         Figure figure = getFigure();
-        figure.widthView();
+        return figure.widthView();
     }
 }
