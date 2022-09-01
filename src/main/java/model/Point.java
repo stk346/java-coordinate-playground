@@ -16,16 +16,27 @@ public class Point implements Comparable<Point>{
     public String get() {
         return "(" + x + "," + y + ")";
     }
-    private int getY(String input) throws IllegalArgumentException {
-        String extractedY = input.substring(input.indexOf(',') + 1, input.indexOf(')'));
+    private int getY(String input) throws IllegalArgumentException, StringIndexOutOfBoundsException {
+        String extractedY = "";
+        try {
+            extractedY = input.substring(input.indexOf(',') + 1, input.indexOf(')'));
+        } catch (StringIndexOutOfBoundsException e) {
+            throw new StringIndexOutOfBoundsException("올바른 좌표 형식을 입력해 주세요.");
+        }
         if (!extractedY.matches("[+-]?\\d*(\\.\\d+)?")) { //  숫자인지 판별
             throw new IllegalArgumentException("좌표는 오직 숫자이어야 합니다.");
         }
         return Integer.parseInt(extractedY);
     }
 
-    private int getX(String input) throws IllegalArgumentException {
-        String extractedX = input.substring(input.indexOf('(') + 1, input.indexOf(','));
+    private int getX(String input) throws IllegalArgumentException, StringIndexOutOfBoundsException {
+        String extractedX = "";
+        try {
+            extractedX = input.substring(input.indexOf('(') + 1, input.indexOf(','));
+        } catch (StringIndexOutOfBoundsException e) {
+            throw new StringIndexOutOfBoundsException("올바른 좌표 형식을 입력해 주세요.");
+        }
+
         if (!extractedX.matches("[+-]?\\d*(\\.\\d+)?")) { //  숫자인지 판별
             throw new IllegalArgumentException("좌표는 오직 숫자이어야 합니다.");
         }
@@ -38,6 +49,7 @@ public class Point implements Comparable<Point>{
         }
         return x - o.x;
     }
+
 
     @Override
     public boolean equals(Object o) {
